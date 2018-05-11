@@ -1,0 +1,22 @@
+PODS:
+  - Nimble (7.0.3)
+  - Quick (1.2.0)
+  - SafeBootRecord (0.1.0)
+
+DEPENDENCIES:
+  - Nimble (~> 7.0.2)
+  - Quick (~> 1.2.0)
+  - SafeBootRecord (from `../`)
+
+EXTERNAL SOURCES:
+  SafeBootRecord:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  SafeBootRecord: 4cfb7d8c6df3d51e8f8e1445bf1f3f50fed0b47a
+
+PODFILE CHECKSUM: 51102f69d68ff4e6644fc773ccc487f8899623d2
+
+COCOAPODS: 1.2.1
