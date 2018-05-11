@@ -4,47 +4,34 @@ import Quick
 import Nimble
 import SafeBootRecord
 
-class TableOfContentsSpec: QuickSpec {
-    override func spec() {
-        describe("these will fail") {
+class SafeBootRecordSpec: QuickSpec {
+  override func spec() {
+    describe("a safe boot record") {
+      
+      beforeEach {
+        let record = BootRecord()
+        expect(record.markFinish()) == true
+        expect(record.didBootSuccessfully) == true
+      }
+      
+      it("assumes a successful boot") {
+        let record = BootRecord()
+        expect(record.didBootSuccessfully) == true
+      }
+      
+      it("can mark a boot start and finish") {
+        let record = BootRecord()
+        expect(record.markStart()) == true
+        expect(record.markFinish()) == true
+      }
 
-            it("can do maths") {
-                expect(1) == 2
-            }
-
-            it("can read") {
-                expect("number") == "string"
-            }
-
-            it("will eventually fail") {
-                expect("time").toEventually( equal("done") )
-            }
-            
-            context("these will pass") {
-
-                it("can do maths") {
-                    expect(23) == 23
-                }
-
-                it("can read") {
-                    expect("🐮") == "🐮"
-                }
-
-                it("will eventually pass") {
-                    var time = "passing"
-
-                    DispatchQueue.main.async {
-                        time = "done"
-                    }
-
-                    waitUntil { done in
-                        Thread.sleep(forTimeInterval: 0.5)
-                        expect(time) == "done"
-
-                        done()
-                    }
-                }
-            }
-        }
+      it("marks boot start and finish with success as expected") {
+        let record = BootRecord()
+        expect(record.markStart()) == true
+        expect(record.didBootSuccessfully) == false
+        expect(record.markFinish()) == true
+        expect(record.didBootSuccessfully) == true
+      }
     }
+  }
 }
