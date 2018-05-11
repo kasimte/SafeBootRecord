@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SafeBootRecord'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SafeBootRecord.'
+  s.summary          = 'SafeBootRecord helps track app boot success.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,13 +18,13 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+SafeBootRecord makes tracking app boot success easy.
                        DESC
 
   s.homepage         = 'https://github.com/kasimte/SafeBootRecord'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'kasimte' => 'kasim@tekkinnovations.com' }
+  s.author           = { 'kasimte' => 'kasimte@gmail.com' }
   s.source           = { :git => 'https://github.com/kasimte/SafeBootRecord.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
