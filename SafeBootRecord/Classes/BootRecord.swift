@@ -8,13 +8,18 @@
 
 import Foundation
 
-/// Manual tracker for app booting.
-/// Useful tracking whether the app is crashing on boot or not.
+/// A convenience class to track app booting success. Allows for marking
+/// boot start and boot end.
+///
+/// If boot start is marked and boot end is not, then the record will be
+/// persisted and can be read during a subsequent boot.
+///
+/// This may be useful for tracking whether the app is crashing on boot or not.
 @objc public class BootRecord: NSObject {
 
   private let kBootRecordKey = "kBootRecordKey"
   
-  private func bootLogs() -> [String] {
+  public func bootLogs() -> [String] {
     if let logs = UserDefaults.standard.array(forKey: kBootRecordKey) as? [String] {
       return logs
     }
@@ -22,7 +27,7 @@ import Foundation
     return [String]()
   }
   
-  private var bootFailureCount: Int {
+  public var bootFailureCount: Int {
     return bootLogs().count
   }
   
