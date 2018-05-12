@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SafeBootRecord'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'SafeBootRecord helps track app boot success.'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ SafeBootRecord makes tracking app boot success easy.
   s.source           = { :git => 'https://github.com/kasimte/SafeBootRecord.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'SafeBootRecord/Classes/**/*'
   
